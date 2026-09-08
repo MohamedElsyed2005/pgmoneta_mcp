@@ -13,6 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
+mod markdown;
 use anyhow::{Context, Result, anyhow, bail};
 use clap::Parser;
 use inquire::Select;
@@ -1403,8 +1404,8 @@ fn execute_tool_command(
                     } else {
                         base_output
                     };
-
-                println!("{}", ensure_user_mode_markdown_output(&output)?);
+                let output = ensure_user_mode_markdown_output(&output)?;
+                println!("{}", markdown::render_markdown_for_console(&output));
             }
             ClientMode::Developer => {
                 if name == "metric" {

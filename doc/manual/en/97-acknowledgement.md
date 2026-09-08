@@ -20,6 +20,7 @@ Shikhar Soni <shikharish05@gmail.com>
 Sakshi Aggarwal <sakshiaggarwal2706@gmail.com>
 Sarthak Aneja <sarthakaneja260@gmail.com>
 Sahitya Chandra <sahityajb@gmail.com>
+Omar Ahmed <omar.ahmed75566@gmail.com>
 ```
 
 ## Committers
