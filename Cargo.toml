@@ -23,9 +23,9 @@ name = "pgmoneta-mcp-inspector"
 path = "src/bin/inspector/main.rs"
 
 [dependencies]
-tokio = { version = "1.51.1", features = ["full"] }
-serde = { version = "1.0.228", features = ["derive"] }
-rmcp = { version = "3.2.0", features = [
+tokio = { version = "1.53.1", features = ["full"] }
+serde = { version = "1.0.229", features = ["derive"] }
+rmcp = { version = "3.3.0", features = [
     "server",
     "macros",
     "client",
@@ -36,51 +36,51 @@ rmcp = { version = "3.2.0", features = [
     "elicitation",
     "schemars",
 ] }
-anyhow = "1.0.102"
-serde_json = "1.0.149"
+anyhow = "1.0.104"
+serde_json = "1.0.151"
 tracing = "0.1.44"
-tokio-util = "0.7.18"
+tokio-util = "0.7.19"
 tracing-subscriber = { version = "0.3.23", features = [
     "env-filter",
     "std",
     "fmt",
     "chrono"
 ] }
-axum = { version = "0.8.8", features = ["macros"] }
-tower-http = { version = "0.6", features = ["cors"] }
-config = { version = "0.15.22", features = ["yaml"] }
-base64 = "0.22.1"
+axum = { version = "0.8.9", features = ["macros"] }
+tower-http = { version = "0.7", features = ["cors"] }
+config = { version = "0.15.25", features = ["yaml"] }
+base64 = "0.23.1"
 home = "0.5.12"
-pbkdf2 = "0.12.2"
-sha2 = "0.10.8"
-hmac = "0.12.1"
-rand = "0.10.0"
-aes-gcm = "0.10.3"
-flate2 = "1.1.9"
-zstd = "0.13.3"
+pbkdf2 = "0.13.0"
+sha2 = "0.11.0"
+hmac = "0.13.0"
+rand = "0.10.2"
+aes-gcm = "0.11.1"
+flate2 = "1.1.10"
+zstd = "0.14.0"
 lz4 = "1.28.1"
 bzip2 = "0.6.1"
-aes = { version = "0.8.4", features = ["hazmat"] }
-zeroize = "1.8.2"
+aes = { version = "0.9.3", features = ["hazmat"] }
+zeroize = "1.9.0"
 scram = { package = "scram-2", version = "0.7.0" }
 once_cell = "1.21.4"
-clap = { version = "4.6.0", features = ["derive"] }
-chrono = "0.4.44"
-rpassword = "7.4.0"
+clap = { version = "4.6.6", features = ["derive"] }
+chrono = "0.4.45"
+rpassword = "7.5.4"
 serde_ini = "0.2.0"
-tracing-appender = "0.2.4"
+tracing-appender = "0.2.5"
 syslog-tracing = "0.3.1"
-reqwest = { version = "0.13.2", default-features = false, features = ["json", "rustls"] }
-prometheus-client = "0.24.0"
+reqwest = { version = "0.13.5", default-features = false, features = ["json", "rustls"] }
+prometheus-client = "0.25.1"
 inquire = "0.9.4"
 treelog = { version = "0.0.6", features = ["arbitrary-json"] }
-rustyline = "17.0.1"
-serial_test = "3.5.0"
+rustyline = "18.0.1"
+serial_test = "4.0.1"
 markdown = "1.0.0"
 syntect = { version = "5.3.0", features = ["html"] }
 [target.'cfg(windows)'.dependencies]
 winlog2 = "0.3.2"
-log = "0.4.29"
+log = "0.4.34"
 
 [dev-dependencies]
 tempfile = "3.27.0"

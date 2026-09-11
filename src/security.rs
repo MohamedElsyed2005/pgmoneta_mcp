@@ -441,7 +441,8 @@ impl SecurityUtil {
 
         let derived_key_bytes =
             Self::derive_key_two_step(master_password, master_salt, &salt, key_len)?;
-        let nonce = Nonce::from_slice(&nonce_bytes);
+        let nonce = Nonce::from(nonce_bytes);
+        let nonce = &nonce;
 
         let ciphertext = match encryption_mode {
             Encryption::AES_128_GCM => {
@@ -501,7 +502,9 @@ impl SecurityUtil {
         };
         let derived_key_bytes =
             Self::derive_key_two_step(master_password, master_salt, file_salt, key_len)?;
-        let nonce = Nonce::from_slice(nonce_bytes);
+        let nonce = Nonce::try_from(nonce_bytes)
+            .map_err(|_| anyhow!("Invalid nonce length: {}", nonce_bytes.len()))?;
+        let nonce = &nonce;
 
         let plaintext = match encryption_mode {
             Encryption::AES_128_GCM => {
