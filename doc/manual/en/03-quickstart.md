@@ -21,6 +21,7 @@ Options:
   -c, --conf <CONF>    Path to pgmoneta MCP configuration file [default: /etc/pgmoneta-mcp/pgmoneta-mcp.conf]
   -u, --users <USERS>  Path to pgmoneta MCP users configuration file [default: /etc/pgmoneta-mcp/pgmoneta-mcp-users.conf]
   -h, --help           Print help
+  -V, --version        Print version
 ```
 
 If you encounter any issues following the above steps, refer to the

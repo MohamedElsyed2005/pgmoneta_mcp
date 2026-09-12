@@ -30,6 +30,9 @@ OPTIONS
 -h, --help
   Print help
 
+-V, --version
+  Print version
+
 REPORTING BUGS
 ==============
 

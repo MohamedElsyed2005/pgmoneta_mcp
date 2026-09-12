@@ -33,6 +33,7 @@ const SERVER_TITLE_LABEL: &str = "pgmoneta MCP/server";
 #[derive(Debug, Parser)]
 #[command(
     name = "pgmoneta-mcp",
+    version,
     about = "A Model Context Protocol (MCP) server for pgmoneta, backup/restore tool for PostgreSQL"
 )]
 struct Args {
